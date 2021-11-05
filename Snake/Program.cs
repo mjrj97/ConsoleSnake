@@ -148,13 +148,23 @@ namespace Snake
                 for (int x = 0; x < sizeY; x++)
                 {
                     if (grid[x,y] == highestValue)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("O ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
                     else if (grid[x, y] > 1 && grid[x,y] != highestValue)
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("# ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (grid[x, y] == 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("a ");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
                     else
                         Console.Write("  ");
                 }
